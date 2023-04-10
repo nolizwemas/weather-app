@@ -1,0 +1,152 @@
+body {
+    width: 65%;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+}
+
+h1 {
+    position: relative;
+    top: 8px;
+    left: 19px;
+    font-size: 28px;
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+hr {
+    position: relative;
+    bottom: 108px;
+    left: 157px;
+    margin: 0;
+    width: 430px;
+    color: #ffffff;
+    font-weight: 900;
+    transform: rotate(-62deg);
+    border: 1px solid #ffffff;
+}
+
+form {
+    position: relative;
+    top: 74px;
+}
+
+button.temp-toggle {
+    position: relative;
+    top: 9px;
+    left: 880px;
+    background: none;
+    border: 1.5px solid #afbde4;
+    color: #ffff;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 2px 6px;
+}
+
+.container {
+    height: 500px;
+    margin: 80px 25px;
+    background-color: #627ecb;
+}
+
+.current-temp {
+    position: relative;
+    top: 131px;
+    left: 72px;
+    font-size: 36px;
+    margin: 0;
+    margin-right: 247px;
+    color: #afbde4;
+}
+
+.next-day-temp,
+.day-two-temp,
+.day-three-temp,
+.day-four-temp,
+.day-five-temp {
+    color: rgba(0, 0, 0, 0.733);
+    margin-left: 12px;
+    margin-right: 7px;
+}
+
+.current-degrees {
+    font-size: 12px;
+    float: right;
+}
+
+.current-weather-icon {
+    position: relative;
+    top: 20px;
+    left: 78px;
+    text-align: center;
+    font-size: 84px;
+    margin: 0;
+}
+
+#find-city {
+    position: relative;
+    left: 43px;
+    bottom: 74px;
+    width: 234px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border: 1px solid #afbde4;
+    border-radius: 5px;
+}
+
+.current-date {
+    position: relative;
+    top: 6px;
+    left: 43px;
+    font-size: 18px;
+    color: #ffff;
+    margin-bottom: 5px;
+    text-shadow: -1px 0 #afbde4, 0 1px #afbde4, 1px 0 #afbde4, 0 -1px #afbde4;
+}
+
+.weather-details {
+    position: relative;
+    top: 7px;
+    left: 43px;
+    font-size: 16px;
+    color: #afbde4;
+}
+
+.weekly-forecast {
+    position: relative;
+    margin: 0 auto;
+    top: 341px;
+    left: 36px;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.next-day,
+.day-2,
+.day-3,
+.day-4,
+.day-5 {
+    list-style: none;
+}
+
+.weather-symbol {
+    font-size: 28px;
+    font-family: fontawesome;
+}
+
+.degrees {
+    font-size: 12px;
+    float: right;
+}
+
+.fa-sun {
+    color: #efd8a5;
+}
+
+.fa-cloud {
+    color: #ffff;
+}
+
+.fa-snowflake {
+    color: #ffff;
+}
