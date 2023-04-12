@@ -1,93 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>weather app</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-<link href="src/styles.css" rel="stylesheet" />
-<script src="https://kit.fontawesome.com/5b248a16f3.js" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-</head>
+<html>
+
+<head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+
+    <html>
+
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous" />
+        <link href="src/styles.css" rel="stylesheet" />
+        <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    </head>
 
 <body>
     <div class="container">
+        <h1>
+            Weather
+        </h1>
+        <h2>Searching for Paris...</h2>
+        <br />
+        <form id="search-form">
+            <input type="text" placeholder="Enter City" autocomplete="off" autofocus="on" id="search-text-input" />
+            <label for="city">Search city</label>
+            <input type="submit" value="search" />
+        </form>
+        <button id="current-position-button">Current</button>
+        <br />
+        <h2 id="city"></h2>
+        <h2>
+            <span class="info">
+                <h2>Thursday Feb 2, 2023 17:00</h2>
+            </span>
+        </h2>
+        <div id="temperature"></div>
+        <div id="temperature-description"></div>
+
+        <br />
         <div class="row">
-            <div class="col-12"> <button class="temp-toggle">°F</button><br /></div>
             <div class="col-4">
-                <div class="temperature current-temp">9 <span class="current-degrees">°C</span></div>
-                <div class="current-weather-icon">
-                    <i class="fa-solid fa-sun current-icon"></i>
-                </div>
-                <div class="city">
-                    <h1>Johannesburg</h1>
-                </div>
-                <form>
-                    <input type="search" name="search-city" id="find-city" placeholder=" search your city" />
-                </form>
-                <div class="current-date" id="current-time">the date</div>
-                <div class="weather-details">
-                    <div class="precipitation">Precipitation: 90%</div>
-                    <div class="humidity">Humidity: 88%</div>
-                    <div class="winds">Wind: 14 km/h</div>
-                </div>
-                <hr />
+                precipitation: 0%
             </div>
-            <div class="col-8">
-                <div class="row weekly-forecast">
-                    <div class="col-sm-2">
-                        <ul class="next-day">
-                            <li class="date">sat</li>
-                            <li class="weather-symbol next-day-weather-icon">
-                                <i class="fa-solid fa-cloud"></i>
-                            </li>
-                            <li class="temperature next-day-temp">8 <span class="degrees">°C</span></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-2">
-                        <ul class="day-2">
-                            <li class="date">sun</li>
-                            <li class="weather-symbol day-two-weather-icon">
-                                <i class="fa-solid fa-cloud-bolt"></i>
-                            </li>
-                            <li class="temperature day-two-temp">16<span class="degrees">°C</span></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-2">
-                        <ul class="day-3">
-                            <li class="date">mon</li>
-                            <li class="weather-symbol day-three-weather-icon">
-                                <i class="fa-regular fa-snowflake"></i>
-                            </li>
-                            <li class="temperature day-three-temp">10 <span class="degrees">°C</span></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-2">
-                        <ul class="day-4">
-                            <li class="date">tue</li>
-                            <li class="weather-symbol day-four-weather-icon">
-                                <i class="fa-solid fa-cloud-bolt"></i>
-                            </li>
-                            <li class="temperature day-four-temp">9 <span class="degrees">°C</span></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-2">
-                        <ul class="day-5">
-                            <li class="date">wed</li>
-                            <li class="weather-symbol day-five-weather-icon">
-                                <i class="fa-solid fa-cloud-sun"></i>
-                            </li>
-                            <li class="temperature day-five-temp">21 <span class="degrees">°C</span></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="col-4">
+                humidity: 54%
+            </div>
+            <div class="col-4">
+                wind: 24 km/h
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="col-2 border shadow">
+                Thurs <br />☀️<br />11º/-1º<br />Sunny
+            </div>
+            <div class="col-2 border shadow">
+                Fri <br />☀️<br />12º/0º <br />Sunny
+            </div>
+            <div class="col-2 border shadow">
+                Sat <br />🌥<br />10º/3º <br />
+                Partly cloudy
+            </div>
+            <div class="col-2 border shadow">
+                Sun <br />🌧️<br />8º/1º<br />Rain
+            </div>
+            <div class="col-2 border shadow">
+                Mon <br />☀️<br />9º/-2º<br />Sunny
+            </div>
+            <div class="col-2 border shadow">
+                Tue <br />☀️<br />8º/-2º<br />Sunny
             </div>
         </div>
     </div>
     <script src="src/index.js"></script>
 </body>
+
+</html>
+</head>
 
 </html>
