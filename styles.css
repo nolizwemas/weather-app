@@ -47,9 +47,11 @@ h2 {
     transition: cubic-bezier(0.165, 0.84, 0.44, 1);
 
 }
-a {
+
+#meta {
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+
 }
