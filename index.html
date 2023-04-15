@@ -1,86 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Weather App</title>
+    <title>WeatherApp noli </title>
     <meta charset="UTF-8" />
-
-    <html>
-
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-            crossorigin="anonymous" />
-        <link href="styles.css" rel="stylesheet" />
-        <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="src/styles.css" rel="stylesheet" />
+</head>
 
 <body>
     <div class="container">
-        <h1>
-            Weather
-        </h1>
-        <h2>Searching for city...</h2>
-        <br />
-        <form id="search-form">
-            <input type="text" placeholder="Enter City" autocomplete="off" autofocus="on" id="search-text-input" />
-            <label for="city">Search city</label>
-            <input type="submit" value="search" />
-        </form>
-        <button id="current-position-button">Current</button>
-        <br />
-        <h2 id="city"></h2>
-        <h2>
-            <span class="info">
-                <h2>Thursday Feb 2, 2023 17:00</h2>
-            </span>
-        </h2>
-        <div id="temperature"></div>
-        <div id="temperature-description"></div>
+        <div class="weatherApp">
+            <form id="search-form">
+                <div class="row">
+                    <div class="form-group col-9 searchBar">
+                        <input type="search" placeholder="Enter a City..." class="form-control" id="cityInput"
+                            autocomplete="off" ; aria-describedby="searchBarHelp" />
+                    </div>
+                    <div class="col-3">
+                        <button type="submit" class="btn btn-secondary w-100">
+                            Search
+                        </button>
+                    </div>
+                    <!-- The text here is a commented and it is hidden on the web page 
+            <button></button>
+              type="button"
+              class="btn btn-secondary col-3 currentLocationButton">
+              Location
+          </button> -->
+                </div>
+            </form>
+            <div class="weatherInfo">
+                <h1 id="city"></h1>
 
-        <br />
-        <div class="row">
-            <div class="col-4">
-                precipitation: 0%
+                <ul>
+                    <li id="date"></li>
+                    <li id="weatherDescription"></li>
+                </ul>
+
+                <div class="row">
+                    <div class="col-8">
+                        <div class="d-flex weather-temperature">
+                            <img src="" alt="" id="icon" />
+                            <div>
+                                <strong><span class="temp">17</span></strong>
+                                <span class="units" id="celsius-link"> ºC </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 details">
+                        <ul>
+                            <li>Humidity: <span id="humidity"></span>%</li>
+                            <li>Wind speed: <span id="wind"></span>km/h</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-4">
-                humidity: 54%
-            </div>
-            <div class="col-4">
-                wind: 24 km/h
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <div class="col-2 border shadow">
-                Thurs <br />☀️<br />11º/-1º<br />Sunny
-            </div>
-            <div class="col-2 border shadow">
-                Fri <br />☀️<br />12º/0º <br />Sunny
-            </div>
-            <div class="col-2 border shadow">
-                Sat <br />🌥<br />10º/3º <br />
-                Partly cloudy
-            </div>
-            <div class="col-2 border shadow">
-                Sun <br />🌧️<br />8º/1º<br />Rain
-            </div>
-            <div class="col-2 border shadow">
-                Mon <br />☀️<br />9º/-2º<br />Sunny
-            </div>
-            <div class="col-2 border shadow">
-                Tue <br />☀️<br />8º/-2º<br />Sunny
+
+            <div class="weather-forecast" id="forecast">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="forecast-date"></div>
+                        <img src="" width="46" alt="" />
+                        <div class="weather-forecast-temperatures">
+                            <span class="forecast-temp-max"></span>
+                            <span class="forecast-temp-min"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        
     </div>
-    <br>
-
-   <p id="meta">
-    <a href="https://github.com/nolizwemas/weather-app.git">Open-source-code</a> by Nolizwe Masondo
-    </p>
-<script src="app.js"></script>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+<script src="src/app.js"></script>
 
 </html>
