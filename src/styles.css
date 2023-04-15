@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(109.6deg, rgb(151, 213, 255) 11.2%, rgb(255, 155, 185) 91.1%);
+background: radial-gradient(circle at 10% 20%, rgb(59, 149, 237) 0%, rgb(7, 91, 173) 90%);
 }
 ul {
     list-style-type: none;
